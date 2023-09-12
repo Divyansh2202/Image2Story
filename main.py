@@ -7,7 +7,7 @@ import streamlit as st
 
 
 load_dotenv(find_dotenv())
-HUGGINGFACEHUB_API_TOKEN = "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"
+HUGGINGFACEHUB_API_TOKEN = os.getenv(HUGGINGFACEHUB_API_TOKEN)
 
 def img2text(url):
     image_to_text = pipeline("image-to-text", model="Salesforce/blip-image-captioning-base")
